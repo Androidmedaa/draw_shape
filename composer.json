@@ -1,0 +1,15 @@
+{
+    "name": "dilber/cizim",
+    "autoload": {
+        "psr-4": {
+            "Dilber\\Cizim\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Androidmedaa",
+            "email": "dilberozer2096@gmail.com"
+        }
+    ],
+    "require": {}
+}

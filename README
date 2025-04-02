@@ -1,0 +1,67 @@
+#Number Recognation AI- Product Requirements Document
+
+##Overview
+A web application that allows users to train and test an AI model for handwritten digit recognition(0-9).
+
+
+##Core Features
+1. Main Interface
+-Two primary buttons: Train and Test
+-Clean, minimalist design
+-Canvas size: 280x280 pixels(Standard for digit recognition)
+
+2. Training Flow
+-Squential drawing interface for digits 0-9
+-Progress indicator showing current digit (e.g:"Draw digit")
+-Canvas with drawing capabilities
+-Submit button for each digit
+-Auto-advance to next digit
+-Return to main screen after completing all digits
+
+3. Testing Flow
+-Single drawing interface
+-Canvas with drawing capabilities
+-Submit button
+-Display prediction results
+-Option to return to main screen
+
+## Technical Specifications
+
+### Frontend(React)
+-Components:
+    -MainScreen
+    -DrawingCanvas
+    -TrainingFlow
+    -TestingFlow
+    -PredictionResult
+-Libraries:
+    -react-canvas-draw for drawing functionality
+    -axios for API calls
+
+### Backend(Node.js/Express)
+-Endpoints:
+    1. POST/train
+    -input: digit:number, imageData:string
+    -Response: succes: boolean
+
+    2. POST /guess
+    -input: imageData: string
+    -response: prediction: number, confidence: number
+
+### AI Model
+-Tensorflow.js for digit recognition
+-Convolutional Neural Network(CNN) architecture
+-Training data stored in server memory
+
+
+## User Experience Requirements
+-Immediate feedback on drawing
+-Clear instractions
+-Smooth transitions between screens
+-Error handling for invalid drawings
+-Loading states during  API calls
+
+## Success Metrics
+-Training completion rate
+-Prediction accuracy
+-User engagement(number of test attempts)
